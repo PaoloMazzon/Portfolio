@@ -1,0 +1,30 @@
+name: Containerize site
+
+on: [push]
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Log in to GHCR
+        if: github.ref == 'refs/heads/main'
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Build & Push container
+        if: github.ref == 'refs/heads/main'
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: true
+          file: deploy/Dockerfile
+          tags: |
+            ghcr.io/paolomazzon/portfolio:latest
+            ghcr.io/paolomazzon/portfolio:${{ github.sha }}
