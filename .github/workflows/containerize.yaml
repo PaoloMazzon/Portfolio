@@ -1,6 +1,9 @@
 name: Containerize site
 
-on: [push]
+on:
+  push:
+    branches:
+      - main
 
 permissions:
   contents: read
@@ -15,16 +18,14 @@ jobs:
         run: |
               npm install
               mkdir -p dist
-              cp node_modules/tuicss/dist/* dist/
+              cp -r node_modules/tuicss/dist/* dist/
       - name: Log in to GHCR
-        if: github.ref == 'refs/heads/main'
         uses: docker/login-action@v3
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Build & Push container
-        if: github.ref == 'refs/heads/main'
         uses: docker/build-push-action@v6
         with:
           context: .
