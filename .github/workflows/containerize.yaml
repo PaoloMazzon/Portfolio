@@ -30,7 +30,6 @@ jobs:
         with:
           context: .
           push: true
-          file: deploy/Dockerfile
           tags: |
             ghcr.io/paolomazzon/portfolio:latest
             ghcr.io/paolomazzon/portfolio:${{ github.sha }}
