@@ -17,11 +17,11 @@ const projects = [
     title: "Octarine",
     image: "https://github.com/PaoloMazzon/Octarine/raw/main/docs/demo.gif",
     description: "Game framework written in C providing effortless fixed-timestep logic and interpolation",
-    link: "https://devplo.itch.io/octarine",
+    link: "https://github.com/PaoloMazzon/octarine",
   },
   {
     title: "Bleeding in the Blur",
-    image: "https://cdn.discordapp.com/attachments/468116088748769312/1497697758809817168/BleedingInTheBlur_zJ9YSgs0Z9.gif?ex=6a71a47b&is=6a7052fb&hm=5f812c3dfadc6e3f30c6d95bc2daa54362d3db169536c7ce72c2174efbd6cd03&",
+    image: "bitb.gif",
     description: "Small in-development roguelike game written in C with a unique skill system",
     link: "https://github.com/PaoloMazzon/BleedingInTheBlur"
   },
@@ -39,7 +39,7 @@ const projects = [
   },
   {
     title: "Astro Engine",
-    image: "https://private-user-images.githubusercontent.com/17896827/237554076-686ab0a6-b37d-4407-8e26-1b98d0bd00ab.gif?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODU3ODI2OTcsIm5iZiI6MTc4NTc4MjM5NywicGF0aCI6Ii8xNzg5NjgyNy8yMzc1NTQwNzYtNjg2YWIwYTYtYjM3ZC00NDA3LThlMjYtMWI5OGQwYmQwMGFiLmdpZj9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjA4MDMlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwODAzVDE4Mzk1N1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTRhMGE0ZWIzYjUzMjE1OGMwZjJlZWE3NjExZjUyN2FkM2MyMjE0MGEyNDQyNDY0MzhiNmU4ZmQ2NzYyMTE3YTYmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JnJlc3BvbnNlLWNvbnRlbnQtdHlwZT1pbWFnZSUyRmdpZiJ9.kOMWv2IeXPQ04TiQkSIH9TE-YasfmvdqRminYCV1iZk",
+    image: "astro.gif",
     description: "(Archived) Game engine written in C utilizing Wren as a scripting language to write jam games quickly",
     link: "https://github.com/PaoloMazzon/Astro"
   },
@@ -73,7 +73,7 @@ export default function App() {
       </div>
       <div className="nav-center">
         <a className="brand">
-          <img src="dist/name.svg" alt=""></img>
+          <img src="name.svg" alt=""></img>
         </a>
       </div>
       <div className="nav-right">
