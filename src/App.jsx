@@ -3,13 +3,13 @@ import React from "react";
 const projects = [
   {
     title: "Vulkan2D",
-    image: "https://private-user-images.githubusercontent.com/17896827/541445510-499ce5ce-5783-4bfe-a16c-e694df15944c.gif?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODU3ODE1ODksIm5iZiI6MTc4NTc4MTI4OSwicGF0aCI6Ii8xNzg5NjgyNy81NDE0NDU1MTAtNDk5Y2U1Y2UtNTc4My00YmZlLWExNmMtZTY5NGRmMTU5NDRjLmdpZj9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjA4MDMlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwODAzVDE4MjEyOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTg4MDA5MjRkMDc1MzFhYmVlZGYwMDY2NjVlMTdkYjRhYTFhNDk2YTQzYWVhYWRhM2YzZDdiMDZmM2RiMzc4NzAmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JnJlc3BvbnNlLWNvbnRlbnQtdHlwZT1pbWFnZSUyRmdpZiJ9.jHlfF0IOOezguOH6_Vx0w-aI6qRTzWdRRygPP3DiCmI",
+    image: "vk2d.gif",
     description: "Advanced 2D renderer written with C and Vulkan",
     link: "https://github.com/PaoloMazzon/Vulkan2D",
   },
   {
     title: "Disorderly Conduct",
-    image: "https://img.itch.zone/aW1nLzIyMTk0NTk1LmdpZg==/original/S0hJ2D.gif",
+    image: "dc.gif",
     description: "Fast-paced sidescrolling shoot-em-up made in a week",
     link: "https://devplo.itch.io/disorderly-conduct",
   },
@@ -27,13 +27,13 @@ const projects = [
   },
   {
     title: "Platformer Demo",
-    image: "https://github.com/PaoloMazzon/Platformer-Demo/raw/main/assets/screenshot.png",
+    image: "platformer.png",
     description: "Small demo of an extremely detailed implementation of platformer logic and physics",
     link: "https://github.com/PaoloMazzon/Platformer-Demo"
   },
   {
     title: "Sea of Clouds",
-    image: "https://img.itch.zone/aW1nLzE2ODA4MzExLmdpZg==/original/h9Or8Q.gif",
+    image: "soc.gif",
     description: "Small roguelike game made in 30 days where you ascend through the clouds",
     link: "https://devplo.itch.io/sea-of-clouds"
   },
@@ -45,13 +45,13 @@ const projects = [
   },
   {
     title: "Bedlam",
-    image: "https://img.itch.zone/aW1hZ2UvMTk3MDQ1My8xMTU4NjMxMy5wbmc=/original/q5BFi1.png",
+    image: "bedlam.png",
     description: "Tiny metroidvania made in 30 days where you explore through the Nexus to find the commander",
     link: "https://devplo.itch.io/bedlam"
   },
   {
     title: "Spacelink",
-    image: "https://img.itch.zone/aW1hZ2UvNzgyMDAzLzQzNzQ5MTcuZ2lm/original/EcrfaO.gif",
+    image: "sl.gif",
     description: "Ludum Dare game where you try to send as many satellites into orbit as possible without collisions",
     link: "https://devplo.itch.io/spacelink"
   },  
@@ -85,7 +85,7 @@ export default function App() {
       <div className="container text-center">
       <figure>
           <img
-            src="https://private-user-images.githubusercontent.com/17896827/467397585-5f99ac2d-f6d9-412e-b21b-cb8453fff8dd.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODU3ODA3OTgsIm5iZiI6MTc4NTc4MDQ5OCwicGF0aCI6Ii8xNzg5NjgyNy80NjczOTc1ODUtNWY5OWFjMmQtZjZkOS00MTJlLWIyMWItY2I4NDUzZmZmOGRkLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjA4MDMlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwODAzVDE4MDgxOFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWMyZTNlZDNhMGIyYWMwZTgxYTgwMDg0YTI3MzZjMWRlZDUyOGY4OWYxMzA3MjhmMWIzOWNkOTQ5OWNhMzgyNmQmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JnJlc3BvbnNlLWNvbnRlbnQtdHlwZT1pbWFnZSUyRnBuZyJ9.UNeWgpshR8rGZYFwbUYWz6EgKaUqYaClFa6p455jdSs"
+            src="banner.png"
             alt=""
             style={{ maxWidth: '100%', height: 'auto' }}
           />
