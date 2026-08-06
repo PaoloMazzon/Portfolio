@@ -152,7 +152,7 @@ export default function App() {
       {/* Footer */}
       <footer className="bg-dark text-center" style={{ padding: "1.5rem 0" }}>
         <p className="is-marginless">
-          &copy; {new Date().getFullYear()} Your Name. All rights reserved.
+          &copy; {new Date().getFullYear()} Paolo Mazzon. All rights reserved.
         </p>
       </footer>
     </div>
