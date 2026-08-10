@@ -34,7 +34,7 @@ jobs:
             ghcr.io/paolomazzon/portfolio:${{ github.sha }}
       - name: Deploy to test env
         run: |
-              curl \
+              curl -f \
                 -X POST \
                 -H "${{ github.secrets.K8S_HEADER_AND_CLIENT_ID }}" \
                 -H "${{ github.secrets.K8S_CLIENT_HEADER_AND_SECRET }}" \
