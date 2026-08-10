@@ -3,7 +3,7 @@ name: Containerize site
 on:
   push:
     branches:
-      - main
+      - dev
 
 permissions:
   contents: read
@@ -30,7 +30,7 @@ jobs:
           context: .
           push: true
           tags: |
-            ghcr.io/paolomazzon/portfolio:latest
+            ghcr.io/paolomazzon/portfolio:dev-latest
             ghcr.io/paolomazzon/portfolio:${{ github.sha }}
       - name: Deploy to test env
         run: |
@@ -38,4 +38,4 @@ jobs:
                 -X POST \
                 -H "${{ github.secrets.K8S_HEADER_AND_CLIENT_ID }}" \
                 -H "${{ github.secrets.K8S_CLIENT_HEADER_AND_SECRET }}" \
-                https://test.paolomazzon.dev/deploy/prod
+                https://test.paolomazzon.dev/deploy/dev
