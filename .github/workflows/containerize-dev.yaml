@@ -38,4 +38,4 @@ jobs:
                 -X POST \
                 -H "${{ github.secrets.K8S_HEADER_AND_CLIENT_ID }}" \
                 -H "${{ github.secrets.K8S_CLIENT_HEADER_AND_SECRET }}" \
-                https://test.paolomazzon.dev/deploy/dev
+                https://api.paolomazzon.dev/deploy/dev
