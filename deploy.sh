@@ -25,7 +25,7 @@ while true; do
 
         if [[ "$method" == "POST" && "$path" == "/deploy/dev" ]]; then
             log "Received dev deploy request"
-            if ! kubectl apply -f /home/debian/portfolio-dev.yaml &> /dev/null; then
+            if ! kubectl rollout restart deployment portfolio-test-deployment &> /dev/null; then
                 error "Failed to apply dev portfolio yaml"
             fi
             json_response='{"message": "Data received successfully"}'
@@ -33,7 +33,7 @@ while true; do
 
         elif [[ "$method" == "POST" && "$path" == "/deploy/prod" ]]; then
             log "Received prod deploy request"
-            if ! kubectl apply -f /home/debian/portfolio.yaml &> /dev/null; then
+            if ! kubectl rollout restart deployment portfolio-deployment &> /dev/null; then
                 error "Failed to apply prod portfolio yaml"
                 json_response='{"message": "Deploy failed"}'
                 echo -e "HTTP/1.1 500 Internal Server Error\r\nContent-Type: application/json\r\nContent-Length: ${#json_response}\r\nConnection: close\r\n\r\n${json_response}"
