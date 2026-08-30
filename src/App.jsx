@@ -57,8 +57,104 @@ const projects = [
   },  
 ];
 
-// <img src="https://icongr.am/devicon/github-original-wordmark.svg?size=128&color=currentColor"></img>
-// <img src="https://icongr.am/devicon/linkedin-original.svg?size=128&color=currentColor"></img>
+const skills = [
+  {
+    name: "Docker",
+    image: "https://devicons.io/devicons/icons/docker-icon.svg",
+    description: "",
+    example_projects: [
+      {
+        name: "DailyServer deployments",
+        link: "https://github.com/PaoloMazzon/DailyServer/blob/main/deploy/Dockerfile"
+      }
+    ]
+  },
+  {
+    name: "AWS",
+    image: "https://devicons.io/devicons/icons/aws.svg",
+    description: "",
+    example_projects: []
+  },
+  {
+    name: "Cloudflare",
+    image: "https://devicons.io/devicons/icons/cloudflare-icon.svg",
+    description: "",
+    example_projects: []
+  },
+  {
+    name: "Git",
+    image: "https://devicons.io/devicons/icons/git-icon.svg",
+    description: "",
+    example_projects: []
+  },
+  {
+    name: "GitHub",
+    image: "https://devicons.io/devicons/icons/github-icon.svg",
+    description: "",
+    example_projects: []
+  },
+  {
+    name: "Kubernetes",
+    image: "https://devicons.io/devicons/icons/kubernetes.svg",
+    description: "",
+    example_projects: []
+  },
+  {
+    name: "SQLite",
+    image: "https://devicons.io/devicons/icons/sqlite-icon.svg",
+    description: "",
+    example_projects: []
+  },
+  {
+    name: "C",
+    image: "https://devicons.io/devicons/icons/c.svg",
+    description: "",
+    example_projects: []
+  },
+  {
+    name: "C++",
+    image: "https://devicons.io/devicons/icons/c-plusplus.svg",
+    description: "",
+    example_projects: []
+  },
+  {
+    name: "Rust",
+    image: "https://devicons.io/devicons/icons/rust.svg",
+    description: "",
+    example_projects: []
+  },
+  {
+    name: "Vulkan",
+    image: "https://devicons.io/devicons/icons/vulkan.svg",
+    description: "",
+    example_projects: []
+  },
+  {
+    name: "CLion",
+    image: "https://devicons.io/devicons/icons/clion.svg",
+    description: "",
+    example_projects: []
+  },
+  {
+    name: "Arduino",
+    image: "https://devicons.io/devicons/icons/arduino.svg",
+    description: "",
+    example_projects: []
+  },
+  {
+    name: "Ubuntu",
+    image: "https://devicons.io/devicons/icons/ubuntu.svg",
+    description: "",
+    example_projects: []
+  },
+  {
+    name: "Bash",
+    image: "https://devicons.io/devicons/icons/bash-icon.svg",
+    description: "",
+    example_projects: []
+  },
+]
+
 
 export default function App() {
   return (
@@ -134,6 +230,37 @@ export default function App() {
 
         <hr />
 
+        {/* Skills */}
+        <section id="about" style={{ padding: "3rem 0" }}>
+          <h2>Skills</h2>
+          <div className="row">
+            {skills.map((skill) => (
+              <div className="col-3">
+              <div className="card">
+                <h4>
+                  <img src={skill.image} style={{ maxWidth: '10%', height: 'auto', verticalAlign: 'middle', marginRight: '10px' }}/>
+                  &#124; {skill.name}
+                </h4>
+                <p>{skill.description}</p>
+                { skill.example_projects.length != 0 ?
+                <details className="dropdown">
+                  <summary>Projects</summary>
+                  <div className="card">
+                    {skill.example_projects.map((proj) => (
+                      <a href={proj.link}>{proj.name}</a>
+                    ))}
+                  </div>
+                </details>
+                 : <></>}
+              </div>
+              </div>
+            ))}
+          </div>
+
+        </section>
+
+        <hr />
+
         {/* Contact */}
         <section id="contact" style={{ padding: "3rem 0" }}>
           <h2>Get In Touch</h2>
@@ -151,7 +278,7 @@ export default function App() {
       </div>
 
       {/* Footer */}
-      <footer className="bg-dark text-center" style={{ padding: "1.5rem 0" }}>
+      <footer className="text-center" style={{ padding: "1.5rem 0" }}>
         <p className="is-marginless">
           &copy; {new Date().getFullYear()} Paolo Mazzon. All rights reserved.
         </p>
