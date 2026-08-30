@@ -61,97 +61,141 @@ const skills = [
   {
     name: "Docker",
     image: "https://devicons.io/devicons/icons/docker-icon.svg",
-    description: "",
+    description: "Used for dev environments and more recently deploying to my K8s cluster.",
     example_projects: [
       {
         name: "DailyServer deployments",
         link: "https://github.com/PaoloMazzon/DailyServer/blob/main/deploy/Dockerfile"
+      },
+      {
+        name: "Portfolio deployments",
+        link: "https://github.com/PaoloMazzon/Portfolio/blob/main/Dockerfile"
       }
     ]
   },
   {
     name: "AWS",
     image: "https://devicons.io/devicons/icons/aws.svg",
-    description: "",
+    description: "Used consistently in my professional career and hackathons.",
     example_projects: []
   },
   {
     name: "Cloudflare",
     image: "https://devicons.io/devicons/icons/cloudflare-icon.svg",
-    description: "",
+    description: "How I handle authentication between my GitHub actions CI/CD setup and local Kubernetes cluster.",
     example_projects: []
   },
   {
-    name: "Git",
-    image: "https://devicons.io/devicons/icons/git-icon.svg",
-    description: "",
-    example_projects: []
+    name: "C",
+    image: "https://devicons.io/devicons/icons/c.svg",
+    description: "My favorite language. Dangerous and powerful, extremly simple and beautiful.",
+    example_projects: [
+      {
+        name: "Vulkan2D",
+        link: "https://github.com/PaoloMazzon/Vulkan2D"
+      },
+      {
+        name: "Astro",
+        link: "https://github.com/PaoloMazzon/Astro"
+      },
+      {
+        name: "Octarine",
+        link: "https://github.com/PaoloMazzon/Octarine"
+      },
+      {
+        name: "Disorderly Conduct",
+        link: "https://devplo.itch.io/disorderly-conduct"
+      },
+      {
+        name: "Bleeding in the Blur",
+        link: "https://github.com/PaoloMazzon/bleedingintheblur"
+      },
+    ]
   },
   {
     name: "GitHub",
     image: "https://devicons.io/devicons/icons/github-icon.svg",
-    description: "",
+    description: "Used professionally and hobbyist. ",
     example_projects: []
   },
   {
     name: "Kubernetes",
     image: "https://devicons.io/devicons/icons/kubernetes.svg",
-    description: "",
+    description: "This website is hosted on my Kubernetes cluster.",
     example_projects: []
   },
   {
     name: "SQLite",
     image: "https://devicons.io/devicons/icons/sqlite-icon.svg",
     description: "",
-    example_projects: []
-  },
-  {
-    name: "C",
-    image: "https://devicons.io/devicons/icons/c.svg",
-    description: "",
-    example_projects: []
+    example_projects: [
+      {
+        name: "DailyServer",
+        link: "https://github.com/PaoloMazzon/DailyServer"
+      }
+    ]
   },
   {
     name: "C++",
     image: "https://devicons.io/devicons/icons/c-plusplus.svg",
-    description: "",
-    example_projects: []
+    description: "Mostly used professionally, learned academically.",
+    example_projects: [
+      {
+        name: "Modern Renderer",
+        link: "https://github.com/PaoloMazzon/modern-renderer"
+      }
+    ]
   },
   {
     name: "Rust",
     image: "https://devicons.io/devicons/icons/rust.svg",
-    description: "",
-    example_projects: []
+    description: "Personal favorite modern language, elagnt with amazing libraries like Tokio.",
+    example_projects: [
+      {
+        name: "Daily Server",
+        link: "https://github.com/PaoloMazzon/dailyserver"
+      }
+    ]
   },
   {
     name: "Vulkan",
     image: "https://devicons.io/devicons/icons/vulkan.svg",
-    description: "",
-    example_projects: []
-  },
-  {
-    name: "CLion",
-    image: "https://devicons.io/devicons/icons/clion.svg",
-    description: "",
-    example_projects: []
-  },
-  {
-    name: "Arduino",
-    image: "https://devicons.io/devicons/icons/arduino.svg",
-    description: "",
-    example_projects: []
+    description: "Used to make all my games and experiment with computer graphics.",
+    example_projects: [
+      {
+        name: "Modern Renderer",
+        link: "https://github.com/PaoloMazzon/modern-renderer"
+      },
+      {
+        name: "Vulkan2D",
+        link: "https://github.com/PaoloMazzon/vulkan2d"
+      }
+    ]
   },
   {
     name: "Ubuntu",
     image: "https://devicons.io/devicons/icons/ubuntu.svg",
-    description: "",
+    description: "Standin for all Linux, as I've used it extensively for years professionally and recreationally.",
     example_projects: []
   },
   {
     name: "Bash",
     image: "https://devicons.io/devicons/icons/bash-icon.svg",
-    description: "",
-    example_projects: []
+    description: "I mostly prefer Fish these days, but Bash does all my scripting. See any of my CI/CD pipelines.",
+    example_projects: [
+      {
+        name: "Modern Renderer CI/CD",
+        link: "https://github.com/PaoloMazzon/modern-renderer/blob/main/.github/workflows/build-and-test.yaml"
+      },
+      {
+        name: "Portfolio CI/CD",
+        link: "https://github.com/PaoloMazzon/Portfolio/blob/main/.github/workflows/containerize.yaml"
+      },
+      {
+        name: "Daily Server CI/CD",
+        link: "https://github.com/PaoloMazzon/DailyServer/blob/main/.github/workflows/test.yaml"
+      },
+    ]
   },
 ]
 
@@ -165,6 +209,7 @@ export default function App() {
       <nav className="nav">
       <div className="nav-left">
         <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
       </div>
       <div className="nav-center">
@@ -231,7 +276,7 @@ export default function App() {
         <hr />
 
         {/* Skills */}
-        <section id="about" style={{ padding: "3rem 0" }}>
+        <section id="skills" style={{ padding: "3rem 0" }}>
           <h2>Skills</h2>
           <div className="row">
             {skills.map((skill) => (
@@ -245,7 +290,7 @@ export default function App() {
                 { skill.example_projects.length != 0 ?
                 <details className="dropdown">
                   <summary>Projects</summary>
-                  <div className="card">
+                  <div className="card" style={{height: 'auto'}}>
                     {skill.example_projects.map((proj) => (
                       <a href={proj.link}>{proj.name}</a>
                     ))}
